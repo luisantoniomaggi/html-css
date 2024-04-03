@@ -1,9 +1,20 @@
 @charset "UTF-8";
 
+
 * {
     padding: 0px;
     margin: 0px;
 }
+
+
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: "Passion One", sans-serif;
+    --fonte3: "Sriracha", cursive;
+}
+
+
 
 body {
     min-height: 100vh;
@@ -17,8 +28,10 @@ header {
 }
 
 header > h1 {
+    font-family: var(--fonte2);
     color: white;
     font-variant: small-caps;
+    font-size: 5.5vw;
 }
 
 header > p {
@@ -42,6 +55,8 @@ section {
     padding-bottom: 10vh;
     line-height: 2em;
     padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 2.5vw;
 }
 
 section.normal {
@@ -50,16 +65,35 @@ section.normal {
 }
 
 section.imagem {
+    background-attachment: fixed;
+    box-shadow: inset 6px 6px 13px 0px rgb(26, 26, 26);
+    background-size: cover;
     color: white;
     background-color: rgb(104, 104, 104)
-    
+
 }
+
 
 section.imagem > p {
+    display: inline-block;
+    padding: 10px;
     background-color: rgba(0, 0, 0, 0.842);
-    width: 400px;
+    text-shadow: 1px 1px 0px black;
 }
 
+section > p {
+    padding-bottom: 2em;
+}
+
+section#img01 {
+    background-image: url(../imagens/background001.jpg);
+    background-position: right, center;
+}
+
+section#img02 {
+    background-image: url(../imagens/background002.jpg);
+    background-position: right, center;
+}
 
 footer {
     background-color: black;
